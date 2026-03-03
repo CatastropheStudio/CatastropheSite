@@ -36,7 +36,7 @@ export default function Header() {
       <nav className="nav-links">
         <a href="#about">About</a>
         <a href="#tribes">Tribes</a>
-        <a href="#contact">Contact</a>
+        <a href="#ContactUs">Contact</a>
       </nav>
 
       <div className="social-links">
