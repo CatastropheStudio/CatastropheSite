@@ -56,7 +56,7 @@ export const profiles = [
     job: "Game Designer",
     image: ProfilePic5,
     description:
-      "Andrew is one of our game designers, located in Ireland, and he is our newest member.",
+      "Andrew is our game designers, located in Ireland, and he is our newest member.",
   },
   
 ];
