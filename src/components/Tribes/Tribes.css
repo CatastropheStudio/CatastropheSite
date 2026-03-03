@@ -6,16 +6,18 @@
 .tribes-logo {
   display: block;
   margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: -70px;
-  height: 300px;
+  margin-top: 120px;
+  margin-bottom: -40px;
+  height: 240px;
   width: auto;
 }
 .tribes-page {
   text-align: center;
-  padding: 40px 20px;
-  color: var(--text-3);
+  padding: 40px 20px 80px;
+  color: var(--text);
   line-height: 1.7;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .tribes-title {
@@ -35,6 +37,7 @@
   display: flex;
   width: max-content;
   animation: scroll 40s linear infinite;
+  padding: 16px 0;
 }
 
 .slideshow img {
@@ -43,7 +46,9 @@
   object-fit: cover;
   flex-shrink: 0;
   margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
 @keyframes scroll {
@@ -60,29 +65,31 @@
   justify-content: space-around;
   gap: 40px;
   margin-bottom: 50px;
-  margin-top: 20px;
+  margin-top: 10px;
   flex-wrap: wrap;
   text-align: left;
 }
 
 .tribes-info div {
-  width: 40%;
+  width: 44%;
   min-width: 280px;
-  background-color: var(--surface-2);
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: rgba(19, 19, 25, 0.92);
+  padding: 26px 30px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.25);
 }
 
 .tribes-info h2 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 15px;
-  color: var(--text-3);
+  color: var(--text);
 }
 
 .tribes-info p {
   font-size: 17px;
   line-height: 1.8;
+  color: var(--text-accent);
 }
 
 .wishlist {
@@ -91,19 +98,20 @@
 
 .wishlist-button {
   display: inline-block;
-  background-color: var(--wishlist-deact);
+  background: linear-gradient(120deg, rgba(240, 180, 106, 0.18), rgba(240, 180, 106, 0.02));
   color: var(--text);
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: 999px;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 1px solid rgba(240, 180, 106, 0.35);
 }
 
 .wishlist-button:hover {
   color: var(--text);
-  background-color: var(--wishlist-act);
+  background: linear-gradient(120deg, rgba(240, 180, 106, 0.3), rgba(240, 180, 106, 0.08));
   text-decoration: none;
   transform: scale(1.05);
 }
@@ -113,26 +121,27 @@
   margin-bottom: 40px;
   width: 100%;
   max-width: 800px;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .video-container video,
 .video-container iframe {
   width: 100%;
   height: 450px;
-  border-radius: 16px;
+  border-radius: 20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .social-icons {
-  color: var(--text-2);
-  margin-top: 0px;
-  margin-bottom: -60px;
+  color: var(--text);
+  margin-top: 10px;
+  margin-bottom: -40px;
 }
 
 .social-icons svg {
@@ -156,5 +165,5 @@
 .slideshow img.active {
   transform: scale(1.25);
   z-index: 5;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
 }

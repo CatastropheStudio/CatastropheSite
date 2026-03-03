@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Mail, MessageSquare, Bug, Users } from "lucide-react";
 import "./Contact.css";
+import "./ContactMobile.css";
 
 export default function Contact({
   links = {
@@ -35,45 +36,56 @@ export default function Contact({
   ];
 
   const [active, setActive] = useState(items[0].id);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 700);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <section className="contact-container" id="contact">
-      <h2 className="contact-title">Contact Us</h2>
+    <div className={isMobile ? "mobile-container" : "desktop-container"}>
+      <div className="contact-container">
+        <h2 className="contact-title">Contact Us</h2>
 
-      <div className="contact-cards">
-        {items.map((it) => {
-          const Icon = it.icon;
-          const isActive = active === it.id;
+        <div className="contact-cards">
+          {items.map((it) => {
+            const Icon = it.icon;
+            const isActive = isMobile ? true : active === it.id;
 
-          return (
-            <div
-              key={it.id}
-              className={`contact-card ${isActive ? "active" : ""}`}
-              onClick={() => setActive(it.id)}
-            >
-              <div className="contact-icon">
-                <Icon size={32} />
-              </div>
-              {isActive && (
-                <div className="contact-info">
-                  <h3>{it.label}</h3>
-                  <p>{it.text}</p>
-                  <a href={it.href} className="contact-button">
-                    Contact
-                  </a>
+            return (
+              <div
+                key={it.id}
+                className={`contact-card ${isActive ? "active" : ""}`}
+                onClick={() => {
+                  if (!isMobile) setActive(it.id);
+                }}
+              >
+                <div className="contact-icon">
+                  <Icon size={32} />
                 </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+                {isActive && (
+                  <div className="contact-info">
+                    <h3>{it.label}</h3>
+                    <p>{it.text}</p>
+                    <a href={it.href} className="contact-button">
+                      Contact
+                    </a>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
 
-      <div className="join-section">
-        <a href={links.join} className="join-button">
-          <Users size={18} />
-          <span>Join Our Team</span>
-        </a>
+        <div className="join-section">
+          <a href={links.join} className="join-button">
+            <Users size={18} />
+            <span>Join Our Team</span>
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

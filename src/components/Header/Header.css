@@ -2,20 +2,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: var(--transparent);
+  padding: 16px 28px;
+  background: rgba(19, 19, 25, 0.55);
+  backdrop-filter: blur(12px);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-}
-.header-active {
-  background-color: var(--overlay);
-  --text: var(--text-2);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+.header-active {
+  background: rgba(19, 19, 25, 0.92);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.Hamburger
+{
+  visibility: hidden;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  pointer-events: none;
+}
 .header-left {
   display: flex;
   align-items: center;
@@ -23,48 +37,42 @@
 
 .header h1 {
   color: var(--text);
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.3s ease;
+  margin: 0;
 }
 
-.header-active h1 {
-  color: var(--text-2);
-}
 .nav-links a {
-  margin: 0 10px;
+  margin: 0 8px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 .nav-links {
   margin-right: 0px;
-}
-.nav-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--text);
+  display: flex;
+  align-items: center;
 }
 .nav-links a:hover {
-  color: var(--accent);
+  color: var(--text);
+  background: rgba(240, 180, 106, 0.2);
+  transform: translateY(-1px);
 }
 
 .social-links a {
   margin-left: 10px;
-  font-size: 24px;
+  font-size: 22px;
   color: var(--text);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
   color: var(--accent);
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-  color: var(--accent);
+  transform: translateY(-2px);
 }
 .profile-pic {
   width: 55px;

@@ -28,13 +28,15 @@ function TeamGif() {
   );
 }
 export default function About() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 700);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  return (
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+  
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth <= 700);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+    return (
     <div className={isMobile ? "mobile-container" : "desktop-container"}>
       <section className="about-intro" id="about">
         <h1>About Us</h1>

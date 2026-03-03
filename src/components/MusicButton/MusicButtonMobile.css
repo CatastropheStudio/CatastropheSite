@@ -1,21 +1,45 @@
-.music-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: var(--music-button);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  font-size: 24px;
-  user-select: none;
-  transition: transform 0.2s;
-}
+@media (max-width: 700px) {
+  .music-button {
+    display: none;
+  }
 
-.music-button:hover {
-  transform: scale(1.1);
+  .music-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, rgba(19, 19, 25, 0.95), rgba(240, 180, 106, 0.35));
+    color: var(--text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
+    font-size: 24px;
+    user-select: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    border: 1px solid rgba(240, 180, 106, 0.35);
+  }
+
+  .music-button::after {
+    content: "";
+    position: absolute;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    right: 8px;
+    bottom: 8px;
+    z-index: -1;
+    background: radial-gradient(
+      circle at center,
+      rgba(240, 180, 106, 0.2),
+      transparent 40%
+    );
+  }
+
+  .music-button:active {
+    transform: scale(0.96);
+  }
 }

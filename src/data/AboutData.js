@@ -18,6 +18,6 @@ export const games = [
   {
     name: "Coming Soon",
     image: PlaceHolder,
-    description: "More games coming soon!",
+    description: "More games (maybe) coming soon!",
   },
 ];
