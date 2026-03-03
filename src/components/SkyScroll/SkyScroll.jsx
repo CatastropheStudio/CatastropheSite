@@ -13,8 +13,16 @@ export default function SkyScroll() {
   });
 
   const [active, setActive] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
 
   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 700);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
     if (active) return;
     let ticking = false;
 
@@ -29,33 +37,43 @@ export default function SkyScroll() {
       const g = Math.round(night[1] + (day[1] - night[1]) * progress);
       const b = Math.round(night[2] + (day[2] - night[2]) * progress);
 
+      const cloudLayer = layers.current.cloud;
+      const mountainLayer = layers.current.mountain;
+      const groundLayer = layers.current.ground;
+
       if (skyRef.current)
         skyRef.current.style.background = `rgb(${r}, ${g}, ${b})`;
-      layers.current.cloud.style.transform = `translateY(${scrollTop * 0.5}px)`;
-      layers.current.mountain.style.transform = `translateY(${
-        scrollTop * 0.2
-      }px)`;
+      if (cloudLayer) {
+        cloudLayer.style.transform = `translate3d(var(--base-x), ${
+          scrollTop * 0.5
+        }px, 0)`;
+      }
+      if (mountainLayer) {
+        mountainLayer.style.transform = `translate3d(var(--base-x), ${
+          scrollTop * 0.2
+        }px, 0)`;
+      }
       const minBrightness = 0.6;
       const mountainBrightness = (
         minBrightness +
         (1 - minBrightness) * progress
       ).toFixed(3);
-      if (layers.current.mountain) {
-        layers.current.mountain.style.setProperty(
+      if (mountainLayer) {
+        mountainLayer.style.setProperty(
           "--mountain-brightness",
           mountainBrightness
         );
       }
-      if (layers.current.ground) {
+      if (groundLayer) {
         const groundDelta = 0.6;
         const groundBrightness = Math.min(
           parseFloat(mountainBrightness) + groundDelta,
           1
         ).toFixed(3);
-        layers.current.ground.style.setProperty(
-          "--ground-brightness",
-          groundBrightness
-        );
+        groundLayer.style.setProperty("--ground-brightness", groundBrightness);
+        groundLayer.style.transform = `translate3d(var(--base-x), ${
+          scrollTop * 0.3
+        }px, 0)`;
       }
       ticking = false;
     };
@@ -70,7 +88,7 @@ export default function SkyScroll() {
     window.addEventListener("scroll", handleScroll);
     updateParallax();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [active]);
+  }, [active, isMobile]);
 
   const handleClick = (name) => {
     if (active === name) {
@@ -80,13 +98,16 @@ export default function SkyScroll() {
       setActive(name);
       document.body.style.overflow = "hidden";
       const element = layers.current[name];
-      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     }
   };
 
   useEffect(() => {
+    if (isMobile) return;
     const exitZoom = (e) => {
-      if (!skyRef.current.contains(e.target)) return;
+      if (!skyRef.current || !skyRef.current.contains(e.target)) return;
       if (e.target.tagName !== "IMG") {
         setActive(null);
         document.body.style.overflow = "auto";
@@ -95,6 +116,17 @@ export default function SkyScroll() {
     window.addEventListener("click", exitZoom);
     return () => window.removeEventListener("click", exitZoom);
   }, []);
+
+  if (isMobile) {
+    return (
+      <div className="sky-hero" aria-hidden="true">
+        <div className="sky-hero-glow" />
+        <div className="sky-hero-orb" />
+        <div className="sky-hero-haze" />
+        <div className="sky-hero-band" />
+      </div>
+    );
+  }
 
   return (
     <div ref={skyRef} className="sky-scroll">

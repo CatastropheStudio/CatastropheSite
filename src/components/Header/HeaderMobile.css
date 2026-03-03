@@ -1,62 +1,71 @@
 @media (max-width: 700px) {
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 16px;
-    background: linear-gradient(180deg, var(--surface-5), rgba(0, 0, 0, 0.02));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title socials"
+      "nav nav";
+    gap: 10px 12px;
+    padding: 12px 14px 10px;
+    background: rgba(19, 19, 25, 0.92);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1200;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
   }
 
   .header-left {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    grid-area: title;
+    justify-self: start;
   }
 
   .header h1 {
     color: var(--text);
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
   }
   .header-left h1 {
     color: var(--text);
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
-    margin-left: 90px;
   }
 
-  .Hamburger{
-    visibility: visible;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background: var(--surface-4);
-    border: 1px solid var(--border);
-    margin-left: 20px;
-    margin-top: 5px;
+  .Hamburger {
+    display: none;
   }
 
   .nav-links {
-    color: var(--debug);
-    display: none;
+    display: flex;
+    gap: 6px;
+    grid-area: nav;
+    justify-content: center;
   }
-  .social-links{
-    padding-top: 5px;
+
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
   }
+
+  .social-links {
+    grid-area: socials;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-self: end;
+  }
+
   .social-links a {
     color: var(--text);
-    font-size: 20px;
-    margin-left: 8px;
-    padding-top: 100px;
+    font-size: 18px;
+    margin-left: 0;
   }
 }

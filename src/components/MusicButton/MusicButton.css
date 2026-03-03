@@ -4,18 +4,20 @@
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: var(--music-button);
+  background: rgba(19, 19, 25, 0.9);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(240, 180, 106, 0.35);
   font-size: 24px;
   user-select: none;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .music-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.06);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.4);
 }

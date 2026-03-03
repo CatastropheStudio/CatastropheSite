@@ -6,6 +6,11 @@ import logo from "../../assets/icons/games/tribes.png";
 
 export default function Tribes() {
   const [images, setImages] = useState([]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+  const [expanded, setExpanded] = useState({
+    history: false,
+    future: false,
+  });
   useEffect(() => {
     const importAll = (r) => r.keys().map(r);
     const imgs = importAll(
@@ -16,6 +21,12 @@ export default function Tribes() {
       )
     );
     setImages(imgs);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 700);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   const [activeIndex, setActiveIndex] = useState(null);
   const slideshowRef = React.useRef();
@@ -37,6 +48,10 @@ export default function Tribes() {
       left: offsetLeft,
       behavior: "smooth",
     });
+  };
+
+  const toggleExpanded = (key) => {
+    setExpanded((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   useEffect(() => {
@@ -69,7 +84,11 @@ export default function Tribes() {
       <section className="tribes-info">
         <div className="history">
           <h2>History of Tribes</h2>
-          <p>
+          <p
+            className={`tribes-text ${
+              isMobile && !expanded.history ? "collapsed" : ""
+            }`}
+          >
             Tribes started on the 7th of February, 2025. The original name of
             Tribes was Crown in Carnage and was supposed to be a small strategy
             game and our first official Steam release. We started with a team of
@@ -95,10 +114,23 @@ export default function Tribes() {
             will release a full version of Tribes somewhere in the first half of
             2026. Thank you all for your support.
           </p>
+          {isMobile && (
+            <button
+              type="button"
+              className="read-more"
+              onClick={() => toggleExpanded("history")}
+            >
+              {expanded.history ? "Show less" : "Read more"}
+            </button>
+          )}
         </div>
         <div className="future-goals">
           <h2>Future Goals</h2>
-          <p>
+          <p
+            className={`tribes-text ${
+              isMobile && !expanded.future ? "collapsed" : ""
+            }`}
+          >
             Future After releasing Tribes fully we would like to update Tribes
             throughout 2026 to get it to an amazing state and round up the game
             to a good and finished point. (We will still have the option of
@@ -110,6 +142,15 @@ export default function Tribes() {
             different genres from Tribes. However this will all happen according
             to how things go with Tribes and our personal lives.
           </p>
+          {isMobile && (
+            <button
+              type="button"
+              className="read-more"
+              onClick={() => toggleExpanded("future")}
+            >
+              {expanded.future ? "Show less" : "Read more"}
+            </button>
+          )}
         </div>
       </section>
 

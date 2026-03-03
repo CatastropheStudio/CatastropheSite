@@ -1,7 +1,7 @@
 .desktop-container .contact-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 90px 20px 80px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -15,23 +15,25 @@
   transform: translateX(-50%);
   top: -50px;
   bottom: 0;
-  width: 100vw;
-  background: #3e3746;
+  width: min(1100px, 100vw);
+  background: linear-gradient(180deg, rgba(19, 19, 25, 0.92), rgba(19, 19, 25, 0.7));
+  border-radius: 24px;
+  border: 1px solid var(--border);
   z-index: -1;
 }
 
 .desktop-container .contact-title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 40px;
-  color: var(--text-2);
+  color: var(--text);
 }
 
 .desktop-container .contact-cards {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: nowrap;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -42,9 +44,9 @@
   min-width: 80px;
   height: 380px;
   overflow: hidden;
-  background: var(--surface-5);
-  border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  background: rgba(19, 19, 25, 0.85);
+  border-radius: 22px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
   padding: 30px 20px;
   cursor: pointer;
   display: flex;
@@ -52,6 +54,7 @@
   align-items: center;
   justify-content: center;
   transition: flex 0.5s ease, background 0.3s ease, transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .desktop-container .contact-card:hover {
@@ -60,10 +63,11 @@
 
 .desktop-container .contact-card.active {
   flex: 1.8;
-  background: var(--surface);
+  background: rgba(19, 19, 25, 0.95);
   color: var(--text-accent);
   z-index: 2;
   transform: scale(1.02);
+  border-color: rgba(240, 180, 106, 0.35);
 }
 
 .desktop-container .contact-icon {
@@ -73,7 +77,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--surface-2);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
@@ -108,19 +112,20 @@
 .desktop-container .contact-button {
   text-decoration: none;
   display: inline-block;
-  background: var(--surface-2);
-  color: var(--text-2);
+  background: rgba(240, 180, 106, 0.15);
+  color: var(--text);
   text-decoration: none;
   padding: 10px 18px;
-  border-radius: 12px;
+  border-radius: 999px;
   font-size: 0.9rem;
   transition: background 0.3s ease, transform 0.2s ease;
+  border: 1px solid rgba(240, 180, 106, 0.35);
 }
 
 .desktop-container .contact-button:hover {
   text-decoration: none;
   color: var(--text);
-  background: var(--link-hover);
+  background: rgba(240, 180, 106, 0.3);
   transform: translateY(-2px);
 }
 
@@ -132,17 +137,18 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--join);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 14px;
   font-weight: 500;
   transition: background 0.3s ease, transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .desktop-container .join-button:hover {
-  background: var(--border);
+  background: rgba(255, 255, 255, 0.12);
   transform: scale(1.05);
 }
 

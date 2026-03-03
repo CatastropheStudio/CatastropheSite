@@ -1,12 +1,13 @@
 .sky-scroll {
   width: 100%;
   min-height: 100vh;
-  height: 127vh;
+  height: min(120vh, 1400px);
+  min-height: 720px;
   background: var(--sky-bg);
   position: relative;
   overflow: hidden;
   transition: background 0.3s linear;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
 }
 
 .layer {
@@ -17,6 +18,7 @@
   height: 100%;
   transform-origin: center center;
   pointer-events: none;
+  --base-x: 0px;
 }
 
 .layer img {
@@ -31,21 +33,23 @@
 }
 
 .cloud {
-  --img-scale: 0;
+  --img-scale: 0.55;
   position: absolute;
-  top: -80px;
-  left: 600px;
-  z-index: 3;
+  top: -120px;
+  left: 50%;
+  --base-x: calc(-50% + 320px);
+  z-index: -1;
 }
 
 .mountain {
   --mountain-brightness: 1;
   filter: brightness(var(--mountain-brightness));
   transition: filter 200ms linear;
-  --img-scale: 1.05;
+  --img-scale: 1.08;
   position: absolute;
-  top: -90px;
-  left: 50px;
+  top: -80px;
+  left: 50%;
+  --base-x: calc(-50% - 120px);
   z-index: 0;
 }
 
@@ -53,10 +57,11 @@
   --ground-brightness: 1;
   filter: brightness(var(--ground-brightness));
   transition: filter 200ms linear;
-  --img-scale: 1.05;
+  --img-scale: 1.08;
   position: absolute;
-  top: 120px;
-  left: 62px;
+  top: 140px;
+  left: 50%;
+  --base-x: calc(-50% - 80px);
   z-index: 1;
 }
 .sky-scroll::after {

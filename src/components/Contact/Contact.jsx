@@ -52,13 +52,15 @@ export default function Contact({
         <div className="contact-cards">
           {items.map((it) => {
             const Icon = it.icon;
-            const isActive = active === it.id;
+            const isActive = isMobile ? true : active === it.id;
 
             return (
               <div
                 key={it.id}
                 className={`contact-card ${isActive ? "active" : ""}`}
-                onClick={() => setActive(it.id)}
+                onClick={() => {
+                  if (!isMobile) setActive(it.id);
+                }}
               >
                 <div className="contact-icon">
                   <Icon size={32} />
