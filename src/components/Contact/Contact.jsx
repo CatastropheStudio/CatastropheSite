@@ -3,7 +3,8 @@ import { Mail, MessageSquare, Bug, Users } from "lucide-react";
 import "./Contact.css";
 import "./ContactMobile.css";
 
-export default function Contact({
+export default function Contact({//add contact id for header link
+
   links = {
     publisher: "mailto:publisher@example.com",
     suggestions: "mailto:suggestions@example.com",
@@ -46,7 +47,7 @@ export default function Contact({
 
   return (
     <div className={isMobile ? "mobile-container" : "desktop-container"}>
-      <div className="contact-container">
+      <div className="contact-container" id="contact">
         <h2 className="contact-title">Contact Us</h2>
 
         <div className="contact-cards">
