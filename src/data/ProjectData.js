@@ -1,6 +1,6 @@
 import ProfilePic1 from "../assets/images/Profile/profile1.jpg";
 import ProfilePic2 from "../assets/images/Profile/profile2.webp";
-import ProfilePic5 from "../assets/images/Profile/32e81dde51b735c03f8b09183533b839.png";
+import ProfilePic5 from "../assets/images/Profile/7c1296d2489216974113f556564c4426-modified (1).png";
 import ProfilePic4 from "../assets/images/Profile/profile4.jpg";
 import ProfilePic3 from "../assets/images/Profile/profile3.png";
 import ProfilePic6 from "../assets/images/Profile/profile6.png";
