@@ -19,7 +19,7 @@ export default function SkyScroll() {
     const handleResize = () => setIsMobile(window.innerWidth <= 700);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     if (isMobile) return;
@@ -115,7 +115,7 @@ export default function SkyScroll() {
     };
     window.addEventListener("click", exitZoom);
     return () => window.removeEventListener("click", exitZoom);
-  }, []);
+  }, [isMobile]);
 
   if (isMobile) {
     return (
