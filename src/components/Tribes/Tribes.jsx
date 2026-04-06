@@ -93,7 +93,7 @@ export default function Tribes() {
             Tribes was Crown in Carnage and was supposed to be a small strategy
             game and our first official Steam release. We started with a team of
             2 people otherwise known as the CEO’s of Catastrophe Studios named
-            Arxar(Arda) and Chezzerz(Dillon). Development started amazingly and
+            Arxar —Arda— and Chezzerz —Dillon—. Development started amazingly and
             progress was amazing at the start. We got really good feedback from
             our followers and friends and it was an amazing feeling. Eventually
             once the idea of Tribes started becoming bigger we decided to hire
@@ -104,11 +104,11 @@ export default function Tribes() {
             This might have been one of the best feelings when making this game.
             The feedback. The gameplay. Tips and people telling us they see so
             much potential in our game and love it. We even got donations which
-            motivated us to work way harder. Eventually Patrick had to drop out
+            motivated us to work way harder. Eventually, Patrick had to drop out
             of our team for personal issues so we decided to expand the team
             once more considering the bigger scope of Tribes and potential the
             game has. <br /> We took on an artist called Ava, 2 programmers
-            called Orange and F1nn, and a musician called Joel. Right now we are
+            called Orange and F1nn, and a musician called Joel. Right now, we are
             incredibly hard at work at pushing out our second and last demo this
             year. We are hoping that with this team and dedication that soon we
             will release a full version of Tribes somewhere in the first half of
@@ -131,11 +131,11 @@ export default function Tribes() {
               isMobile && !expanded.future ? "collapsed" : ""
             }`}
           >
-            Future After releasing Tribes fully we would like to update Tribes
+            Future after releasing Tribes fully we would like to update Tribes
             throughout 2026 to get it to an amazing state and round up the game
-            to a good and finished point. (We will still have the option of
+            to a good and finished point (we will still have the option of
             coming back and adding more and we will be working on bug fixes
-            ofcourse) <br /> <br /> After Tribes we dont have a set game idea we
+            of course). <br /> <br /> After Tribes, we don't have a set game idea we
             would like to work on. There are tons of game genres and things we
             would like to try and possibly even go back to work on some of our
             older games. We have a high chance to even try out 3D games and very
