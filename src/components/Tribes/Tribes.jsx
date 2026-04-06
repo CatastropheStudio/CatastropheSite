@@ -142,6 +142,7 @@ export default function Tribes() {
             different genres from Tribes. However this will all happen according
             to how things go with Tribes and our personal lives.
           </p>
+           >
           {isMobile && (
             <button
               type="button"
