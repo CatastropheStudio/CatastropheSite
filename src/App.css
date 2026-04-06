@@ -73,7 +73,7 @@ h2,
 h3,
 h4 {
   font-family: var(--heading-font);
-  letter-spacing: 0.6px;
+  letter-spacing: 0.8px;
 }
 
 a {
