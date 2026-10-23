@@ -16,11 +16,11 @@ export const profiles = [
   },
   
   {
-    name: "F1nn",
+    name: "Awen",
     job: "Programmer",
     image: ProfilePic3,
     description:
-      "F1nn is one of our programmers, located in The Netherlands and has 7 years of experience in the game development field, he primarily focuses on optimization and gameplay mechanics. He also made this website.",
+      "Awen is one of our programmers, located in The Netherlands and has 7 years of experience in the game development field, they primarily focuses on optimization and gameplay mechanics. They also made this website! Left the team.",
   },
   {
     name: "Ava",
