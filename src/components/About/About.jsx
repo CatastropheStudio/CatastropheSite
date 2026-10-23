@@ -3,7 +3,7 @@ import { timelineData, games } from "../../data/AboutData";
 import { profiles } from "../../data/ProjectData";
 import "./About.css";
 import "./AboutMobile.css";
-import teamlogo from "../../assets/images/Profile/cat.png";
+import teamlogo from "../../assets/images/Profile/Cat.png";
 import teamgif from "../../assets/images/Profile/teamgif.gif";
 
 function TeamGif() {
