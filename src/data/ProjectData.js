@@ -1,5 +1,5 @@
 import ProfilePic1 from "../assets/images/Profile/Chezzerz.jpg";
-import ProfilePic4 from "../assets/images/Profile/Ardar.jpg"
+import ProfilePic2 from "../assets/images/Profile/Ardar.jpg"
 
 export const profiles = [
   {
@@ -12,9 +12,9 @@ export const profiles = [
   {
     name: "Arda",
     job: "Programmer",
-    image: ProfilePic4,
+    image: ProfilePic2,
     description:
       "Arda is one of our programmers and is the other founder of C.S, located in NL and has 3 years of experience in the game development field.",
-  }
+  },
 ];
 
