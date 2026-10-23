@@ -85,8 +85,7 @@ export default function About() {
           })}
         </div>
       </section>
-      <br>  </br>
-
+      
       <section className="games-section">
         <div className="game-header">
           <h2>Game catalogue</h2>
