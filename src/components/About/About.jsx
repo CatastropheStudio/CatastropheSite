@@ -52,11 +52,11 @@ export default function About() {
           making the right or “wrong” choices. Eventually, they realized that
           the game was out of their reach and that the vision was too big for a
           team of two people. <br /> <br />
-          On February 2nd, 2025, they started working on "Tribes". They saw this
+          On February 2nd, 2025, they started working on "Crown In Carnage". They saw this
           as a smaller project and the game they wanted to be their first
           commercial Steam release — a strategy game designed to be played by
-          everyone and adaptable to each player’s playstyle. At the moment, the
-          team is composed of seven people working at Catastrophe Studios,
+          everyone and adaptable to each player’s playstyle. Later changed its name to "Tribes". At the moment, the
+          team is composed of 2 people working at Catastrophe Studios with others outside helping,
           making amazing progress and closing in on a full release in 2026.
         </p>
       </section>
