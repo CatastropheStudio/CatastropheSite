@@ -3,7 +3,7 @@
     width: 100%;
     padding: 18px 14px 24px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     box-sizing: border-box;
     border-radius: 18px;
