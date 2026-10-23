@@ -1,10 +1,5 @@
 import ProfilePic1 from "../assets/images/Profile/Chezzerz.jpg";
-import ProfilePic2 from "../assets/images/Profile/Ava.webp";
-import ProfilePic5 from "../assets/images/Profile/Andrew.png";
 import ProfilePic4 from "../assets/images/Profile/Ardar.jpg"
-import ProfilePic3 from "../assets/images/Profile/F1nn.png";
-import ProfilePic6 from "../assets/images/Profile/Alex.png";
-import ProfilePic7 from "../assets/images/Profile/Joel.png";
 
 export const profiles = [
   {
@@ -14,36 +9,7 @@ export const profiles = [
     description:
       "Dillon is the main artist and is one of the founding members of catastrophe studios. He is from Ireland and works off of aseprite.",
   },
-  
-  {
-    name: "Awen",
-    job: "Programmer",
-    image: ProfilePic3,
-    description:
-      "Awen is one of our programmers, located in The Netherlands and has 7 years of experience in the game development field, they primarily focuses on optimization and gameplay mechanics. They also made this website! Left the team.",
-  },
-  {
-    name: "Ava",
-    job: "Artist",
-    image: ProfilePic2,
-    description:
-      "Ava is the secondary artist, located in Ireland and primarily uses aseprite.",
-  },
-  {
-    name: "Alex",
-    job: "Programmer",
-    image: ProfilePic6,
-    description:
-      "Alex is one of our programmers, located in Ireland and has 1 year of experience.",
-  },
-  {
-    name: "Joel",
-    job: "Musician",
-    image: ProfilePic7,
-    description:
-      "Joel is our musician and sound designer, located in Argentina and has 43.824 hours of experience in the music industry.",
-  },
-  
+
   {
     name: "Arda",
     job: "Programmer",
@@ -51,13 +17,5 @@ export const profiles = [
     description:
       "Arda is one of our programmers and is the other founder of C.S, located in NL and has 3 years of experience in the game development field.",
   },
-  {
-    name: "Andrew",
-    job: "Game Designer",
-    image: ProfilePic5,
-    description:
-      "Andrew is our game designers, located in Ireland, and he is our newest member.",
-  },
-  
 ];
 
