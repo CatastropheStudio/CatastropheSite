@@ -60,28 +60,32 @@
   }
 }
 
+
 .tribes-info {
   display: flex;
-  justify-content: space-around;
-  gap: 25px;
+  justify-content: center;
+  gap: 15px;
   margin-bottom: 50px;
   margin-top: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   text-align: left;
-  width: 210%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tribes-info div {
   flex: 1 1 0;
+  width: 0;
   min-width: 0;
   margin: 0;
   box-sizing: border-box;
   background: rgba(19, 19, 25, 0.92);
-  padding: 30px 25px;
+  padding: 26px 20px;
   border-radius: 18px;
   border: 1px solid var(--border);
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.25);
 }
+
 
 .tribes-info h2 {
   font-size: 26px;
