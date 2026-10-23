@@ -6,9 +6,9 @@ import "./ContactMobile.css";
 export default function Contact({//add contact id for header link
 
   links = {
-    publisher: "mailto:publisher@example.com",
-    suggestions: "mailto:suggestions@example.com",
-    bugs: "mailto:bugs@example.com",
+    publisher: "catastrophestudiosac@gmail.com",
+    suggestions: "catastrophestudiosac@gmail.com",
+    bugs: "catastrophestudiosac@gmail.com",
     join: "/careers",
   },
 }) {
