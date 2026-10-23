@@ -12,14 +12,16 @@ export default function Tribes() {
     future: false,
   });
   useEffect(() => {
-    const importAll = (r) => r.keys().map(r);
-    const imgs = importAll(
-      require.context(
-        "../../assets/images/Screenshots",
-        false,
-        /\.(png|jpe?g|svg)$/
-      )
-    );
+    const imgs = Object.entries(
+      import.meta.glob("../../assets/images/Screenshots/*.{png,jpg,jpeg,svg}", {
+        eager: true,
+        query: "?url",
+        import: "default",
+      }),
+    )
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([, src]) => src);
+
     setImages(imgs);
   }, []);
 
@@ -55,13 +57,17 @@ export default function Tribes() {
   };
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (!slideshowRef.current.contains(e.target)) {
-        setActiveIndex(null);
-      }
-    };
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
+    const imgs = Object.entries(
+      import.meta.glob("../../assets/images/Screenshots/*.{png,jpg,jpeg,svg}", {
+        eager: true,
+        query: "?url",
+        import: "default",
+      }),
+    )
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([, src]) => src);
+
+    setImages(imgs);
   }, []);
 
   return (
@@ -95,23 +101,23 @@ export default function Tribes() {
             2 people named Arda and Dillon. Development started quickly and
             progress was amazing at the start. We got really good feedback from
             our followers and friends and it was an amazing feeling. Eventually
-            once the idea of Tribes started becoming bigger we decided to hire
-            2 more people into Tribes and we got a programmer called Alex and a
+            once the idea of Tribes started becoming bigger we decided to hire 2
+            more people into Tribes and we got a programmer called Alex and a
             composer called Patrick on our team. The team was good and it went
             well, and we got to a point of releasing our Steam Demo.
             <br /> <br />
             This might have been one of the best feelings when making this game.
             The feedback. The gameplay. Tips and people telling us they see so
             much potential in our game and love it. We even got donations which
-            motivated us to work even harder. Eventually, Patrick had to drop out
-            of the project, so we decided to expand the team once more considering
-            the bigger scope of Tribes and potential the game has. 
-            <br /> 
-            We took on an artist called Ava, a programmer
-            called F1nn, and a composer named Joel. Right now, we are
-            incredibly hard at work at pushing out our full release this
-            year. We are hoping that with this team and dedication that soon we
-            will release a full version of Tribes in December 2026. Thank you all for your support.
+            motivated us to work even harder. Eventually, Patrick had to drop
+            out of the project, so we decided to expand the team once more
+            considering the bigger scope of Tribes and potential the game has.
+            <br />
+            We took on an artist called Ava, a programmer called F1nn, and a
+            composer named Joel. Right now, we are incredibly hard at work at
+            pushing out our full release this year. We are hoping that with this
+            team and dedication that soon we will release a full version of
+            Tribes in December 2026. Thank you all for your support.
           </p>
           {isMobile && (
             <button
@@ -133,15 +139,15 @@ export default function Tribes() {
             After releasing Tribes fully we would like to update Tribes
             throughout 2026/27 to get it to an clean state and round up the game
             to a good and finished point (we will still have the option of
-            coming back and adding more and we will be working on bug fixes
-            of course). <br /> <br /> After Tribes, we don't have a set game idea we
-            would like to work on. There are tons of game genres and things we
-            would like to try and possibly even go back to work on some of our
-            older game ideas. We have a high chance to even try out 3D games and very
-            different genres from Tribes[RTS]. However this will all happen according
-            to how things go with Tribes and our personal lives.
+            coming back and adding more and we will be working on bug fixes of
+            course). <br /> <br /> After Tribes, we don't have a set game idea
+            we would like to work on. There are tons of game genres and things
+            we would like to try and possibly even go back to work on some of
+            our older game ideas. We have a high chance to even try out 3D games
+            and very different genres from Tribes[RTS]. However this will all
+            happen according to how things go with Tribes and our personal
+            lives.
           </p>
-           >
           {isMobile && (
             <button
               type="button"
