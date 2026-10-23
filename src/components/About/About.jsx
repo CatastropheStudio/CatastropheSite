@@ -4,7 +4,7 @@ import { profiles } from "../../data/ProjectData";
 import "./About.css";
 import "./AboutMobile.css";
 import teamlogo from "../../assets/images/Profile/Cat.png";
-import teamgif from "../../assets/images/Profile/teamgif.gif";
+import teamgif from "../../assets/images/Profile/CatGiff.gif";
 
 function TeamGif() {
   const [isPlaying, setIsPlaying] = useState(false);
