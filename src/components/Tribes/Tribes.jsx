@@ -149,18 +149,6 @@ export default function Tribes() {
             lives.
           </p>
 
-        <div className="credits">
-          <h2>Credits</h2>
-          <ul>
-            <li><strong>Arda:</strong> Programmer - Game design, programming and development.</li>
-            <li><strong>Dillon:</strong> Artist - Game design, development, artwork and visual design.</li>
-            <li><strong>Alex:</strong> Programmer - Programming and technical development.</li>
-            <li><strong>Ava:</strong> Artist - Artwork and colouring.</li>
-            <li><strong>F1nn:</strong> Programmer - Gameplay systems and programming.</li>
-            <li><strong>Joel:</strong> Composer - Music and soundtracks.</li>
-          </ul>
-        </div>
-
           {isMobile && (
             <button
               type="button"
@@ -170,6 +158,18 @@ export default function Tribes() {
               {expanded.future ? "Show less" : "Read more"}
             </button>
           )}
+        </div>
+
+       <div className="credits">
+          <h2>Credits</h2>
+          <ul>
+            <li><strong>Arda:</strong> Programmer - Game design, programming and development.</li>
+            <li><strong>Dillon:</strong> Artist - Game design, development, artwork and visual design.</li>
+            <li><strong>Alex:</strong> Programmer - Programming and technical development.</li>
+            <li><strong>Ava:</strong> Artist - Artwork and colouring.</li>
+            <li><strong>F1nn:</strong> Programmer - Gameplay systems and programming.</li>
+            <li><strong>Joel:</strong> Composer - Music and soundtracks.</li>
+          </ul>
         </div>
       </section>
 
