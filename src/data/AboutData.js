@@ -13,7 +13,7 @@ export const games = [
     name: "Tribes",
     image: TribesImage,
     description:
-      "In a stone-age like war, stuck on a lush, isolated island, its down to you to command your tribe to conquer and colonize the island by any means! Tribes offers skirmish, multiplayer and a full campaign mode for you to experience with friends or alone!!!",
+      "In a Stone Age–like war, stranded on a lush, isolated island, it’s up to you to command your tribe and conquer and colonize the island by any means necessary! Tribes offers Skirmish, Multiplayer, and a full Campaign mode for you to experience with friends or play alone!",
   },
   {
     name: "Coming Soon",
