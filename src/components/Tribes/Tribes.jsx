@@ -169,7 +169,7 @@ export default function Tribes() {
         <iframe
           width="560"
           height="315"
-          src="https://youtu.be/97Tql2pol3Y?si=w9vV18NhS7XogJY1"
+          src="https://www.youtube.com/watch?v=97Tql2pol3Y"
           title="Tribes Video"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
