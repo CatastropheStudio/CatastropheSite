@@ -1,4 +1,4 @@
-import TribesImage from "../assets/images/Games/Name.jpeg";
+import TribesImage from "../assets/images/Games/Name.png";
 import PlaceHolder from "../assets/images/Games/PlaceHodler.png";
 export const timelineData = [
   { year: "28/12/2024", text: "Studio Founded" },
