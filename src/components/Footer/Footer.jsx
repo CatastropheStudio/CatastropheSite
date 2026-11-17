@@ -21,19 +21,39 @@ export default function Footer() {
     <footer className={`footer px-8 py-12 ${isMobile ? "footer-mobile" : ""}`}>
       <p className="text-center italic mb-6">"Making games both fun and with chaos!"</p>
       <div className="socials">
-        <a href="...">
+        <a
+          href="https://www.youtube.com/@CatastropheStudiosAC"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaYoutube />
         </a>
-        <a href="...">
+        <a
+          href="https://www.discord.gg/twbPKAHRNy"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaDiscord />
         </a>
-        <a href="...">
+        <a
+          href="https://www.tiktok.com/@tribesgame"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaTiktok />
         </a>
-        <a href="...">
+        <a
+          href="https://www.instagram.com/tribesgame/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaInstagram />
         </a>
-        <a href="...">
+        <a
+          href="https://www.patreon.com/CatastropheStudiosDEV"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaPatreon />
         </a>
       </div>
